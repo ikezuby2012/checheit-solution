@@ -1,0 +1,57 @@
+.services {
+  padding: 10vh 0;
+  width: 85%;
+  margin: 0 auto;
+  @media only screen and (max-width: $small-tab-0) {
+    flex-direction: column;
+  }
+  @media only screen and (max-width: $bp-larger) {
+    width: 70%;
+    padding: 5vh 0}
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.service {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 1rem;
+  @media only screen and (max-width: $bp-larger) {margin-right: 0}
+  @media only screen and (max-width: $small-tab-0) {
+    &:not(:last-child) {margin-bottom: 2rem;}
+  }
+
+  &__icon {
+    height: 15rem;
+    width: 30rem;
+    fill: var(--color-primary);
+    margin-right: 1rem;
+    @media only screen and (max-width: $bp-larger) {
+      height: 10rem;
+      width: 20rem;}
+  }
+
+  &-heading__text {
+    font-family: "josefin sans", Sans-serif;
+    font-weight: 400;
+    font-size: 1.9rem;
+    color: var(--grey-dark-1);
+    text-transform: uppercase;
+    @media only screen and (max-width: $tablet) {
+      font-weight: 300;
+      font-size: 1.6rem;
+      margin-bottom: .5rem !important;
+    }
+  }
+
+  &-paragraph {
+    font-size: 1.4rem;
+    @media only screen and (max-width: $bp-larger) {font-size: 1.2rem}
+    @media only screen and (max-width: $tablet) {
+      hyphens: auto;
+    }
+  }
+}

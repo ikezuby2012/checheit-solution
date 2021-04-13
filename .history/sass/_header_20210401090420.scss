@@ -1,0 +1,148 @@
+.header {
+  position: relative;
+  height: 98vh;
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../css/img/phone-mockup.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../css/img/phone-mockup.jpg);
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+
+  @media only screen and (max-width: $mobile-phone-0) {
+    height: 85vh;
+  }
+
+  &-text {
+    color: var(--grey-light-2);
+    margin-bottom: 5rem;
+
+    backface-visibility: hidden;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    &-1 {
+      display: block;
+      font-size: 5rem;
+      font-weight: 400;
+      letter-spacing: .5rem;
+      word-spacing: 0.6rem;
+      text-transform: capitalize;
+      text-align: center;
+      @media only screen and (max-width: $bp-medium-1) {
+        font-size: 4rem}
+      @media only screen and (max-width: $mobile-phone-1) {
+        font-size: 3rem;
+      }
+      animation: moveInleft 1s ease-in;
+    }
+
+    &-2 {
+      display: block;
+      font-size: 5.5rem;
+      font-weight: 500;
+      letter-spacing: .5rem;
+      word-spacing: 0.7rem;
+      text-transform: capitalize;
+      text-align: center;
+      @media only screen and (max-width: $bp-medium-1) {
+        font-size: 4.2rem}
+      @media only screen and (max-width: $mobile-phone-1) {
+        font-size: 3.2rem;
+      }
+      animation: moveInRight 1s ease-out;
+    }
+  }
+
+  &-paragraph {
+    display: block;
+    font-size: 1.7rem;
+    font-weight: 400;
+    word-spacing: 0.6rem;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 6rem;
+  }
+
+  &-whatsapp {
+    position: fixed;
+    left: 93%;
+    bottom: 10%;
+    z-index: 100;
+    @media only screen and (max-width: $mobile-phone-x) {
+      left: 85%;
+    }
+    &_icon {
+      height: 5rem;
+      width: 5rem;
+      cursor: pointer;
+      fill: #1ebea5;
+      transition: all .2s;
+    }
+  }
+}
+
+.logo {
+  height: 10rem;
+  width: auto;
+  margin-right: 40%;
+  filter: brightness(3.5) hue-rotate(116deg);
+  filter: brightness(3.5) hue-rotate(116deg);
+
+
+
+
+
+  
+}
+@media only screen and (max-width: $bp-larger) {height: 7rem;
+  width: auto;
+margin-right: 25%;}
+.nav {
+
+  &-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 2rem;
+  }
+
+  &-list {
+    list-style: none;
+
+    @media only screen and (max-width: $mobile-phone-0)  {
+      display: none;
+    }
+  }
+
+  &-item {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 2.5rem
+    }
+  }
+
+  &-link {
+    font-display: $font-display;
+
+    &:link,
+    &:visited {
+      padding: .8rem 0;
+      color: var(--grey-light-1);
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 1.8rem;
+      border-bottom: 2px solid transparent;
+      -webkit-transition: border-bottom .2s;
+      transition: border-bottom .2s;
+    }
+
+    &:hover,
+    &:active {
+      border-bottom: 2px solid var(--color-primary);
+    }
+  }
+}

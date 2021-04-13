@@ -1,0 +1,143 @@
+.story {
+  display: flex;
+  flex-direction: row;
+
+  @media only screen and (max-width: $small-tab-0) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-picture {
+    display: flex;
+    flex: 0 0 50%;
+
+    position: relative;
+    background-image: linear-gradient(to right, rgba(#0bdba3, .55), rgba(#8a0bdb, .7)),
+    url(../css/img/stationery.jpg);
+    background-size: cover;
+  }
+
+  &-text {
+    flex: 1;
+    padding: 3rem;
+    @media only screen and (max-width: 53.5em) {
+      padding: .5rem;
+    }
+  }
+
+  &-sub_text {
+    position: relative;
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 400;
+
+    display: grid;
+    grid-template-columns: 1px max-content;
+    align-items: center;
+    grid-column-gap: 3.7rem;
+
+    &::before {
+      content: " ";
+      height: 5px;
+      width: 3.5rem;
+      display: block;
+      background-image: linear-gradient(to right, var(--color-green), var(--color-sec));
+    }
+  }
+
+  &_heading__text {
+    font-display: $font-display;
+    font-weight: bolder;
+    font-size: 3.8rem;
+    text-transform: uppercase;
+  }
+
+  &-paragraph {
+    font-size: $font-size;
+
+    &:not(:last-child) { margin-bottom: 2rem;}
+  }
+
+  &-stats {
+
+    &_heading-text {font-size: 1.5rem; }
+
+    &_record {
+      &-text {
+        &-1 {margin-right: 35rem;
+          @media only screen and (max-width: $mobile-phone-x1) {
+            margin-right: 30rem;
+          }}
+
+        &-2 {margin-right: 20rem;
+          @media only screen and (max-width: $mobile-phone-x1) {
+            margin-right: 15rem;
+          }}
+
+        &-3 {margin-right: 27rem;
+          @media only screen and (max-width: $mobile-phone-x1) {
+            margin-right: 22rem;
+          }}
+
+        &-4 {margin-right: 45rem;
+          @media only screen and (max-width: $mobile-phone-x1) {
+            margin-right: 35rem;
+          }}
+      }
+
+      &-fx {
+        &-1 {
+          &::before {
+            content: " ";
+            height: 5px;
+            width: 41.5rem;
+            display: block;
+            background-image: linear-gradient(to right, var(--color-sec), var(--color-green));
+            @media only screen and (max-width: $mobile-phone-x1) {
+              width: 35.5rem;
+            }
+          }
+        }
+
+        &-2 {
+          &::before {
+            content: " ";
+            height: 5px;
+            width: 28.5rem;
+            display: block;
+            background-image: linear-gradient(to right, var(--color-sec), var(--color-green));
+            @media only screen and (max-width: $mobile-phone-x1) {
+              width: 23.5rem;
+            }
+          }
+        }
+
+        &-3 {
+          &::before {
+            content: " ";
+            height: 5px;
+            width: 32.5rem;
+            display: block;
+            background-image: linear-gradient(to right, var(--color-sec), var(--color-green));
+            @media only screen and (max-width: $mobile-phone-x1) {
+              width: 27.5rem;
+            }
+          }
+        }
+
+        &-4 {
+          &::before {
+            content: " ";
+            height: 5px;
+            width: 50.5rem;
+            display: block;
+            background-image: linear-gradient(to right, var(--color-sec), var(--color-green));
+            @media only screen and (max-width: $mobile-phone-x1) {
+              width: 42.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

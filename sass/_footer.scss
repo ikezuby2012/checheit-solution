@@ -1,0 +1,39 @@
+.footer {
+    background-color: var(--color-dark);
+    padding: 3rem 0;
+}
+.nav {
+    list-style: none;
+    width: 57%;
+    margin: 0 auto;
+
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    grid-gap: 2rem;
+    align-items: center;
+
+    &__link:visited,
+    &__link:link {
+        font-size: $font-size;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        font-family: $font-display; 
+        text-transform: uppercase;
+        text-align: center;
+        padding: 1.5rem;
+        display: block;
+        transition: all .2s;       
+    }
+
+    &__link:hover,
+    &__link:active {
+        background-color: rgba($color: #fff, $alpha: .05);
+        transform: translateY(-3px);
+    }
+}
+.copyright {
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--grey-light-1);
+}

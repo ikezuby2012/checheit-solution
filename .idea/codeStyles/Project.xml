@@ -1,0 +1,10 @@
+<component name="ProjectCodeStyleConfiguration">
+  <code_scheme name="Project" version="173">
+    <CssCodeStyleSettings>
+      <option name="KEEP_SINGLE_LINE_BLOCKS" value="true" />
+    </CssCodeStyleSettings>
+    <ScssCodeStyleSettings>
+      <option name="KEEP_SINGLE_LINE_BLOCKS" value="true" />
+    </ScssCodeStyleSettings>
+  </code_scheme>
+</component>
