@@ -22,6 +22,15 @@ app.use(express.static(path.join(`${__dirname}`, "public")));
 
 app.use(compression());
 
+if(process.env.NODE_ENV === 'production') {
+    mongoose.connect(process.env.DATABASE_MONGO, {
+        useNewUrlParser: true,
+        useCreateIndex: true,
+        useFindAndModify: false
+    }).then(() => {
+        console.log(`DB connected successfully!`);
+    });
+}
 mongoose.connect(process.env.DATABASE_LOCAL, {
     useNewUrlParser: true,
     useCreateIndex: true,
