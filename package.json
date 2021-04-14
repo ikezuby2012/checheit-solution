@@ -14,8 +14,9 @@
     "compress:css": "node-sass css/style.prefix.css css/style.css --output-style-compressed",
     "build:css": "npm run-all compile:sass concat:css prefix:css compress:css",
     "watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js",
-    "build:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js",
-    "server": "nodemon server.js"
+    "build:js": "parcel build ./public/js/index.js --out-dir ./public/js --out-file bundle.js",
+    "server": "nodemon server.js",
+    "server:prod": "cross-env NODE_ENV=production nodemon server.js"
   },
   "author": "mr zuby",
   "license": "ISC",
