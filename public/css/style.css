@@ -129,6 +129,11 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center; }
+    @media only screen and (max-width: 48em) {
+      .client-box {
+        overflow-x: scroll;
+        -ms-scroll-snap-type: x mandatory;
+        scroll-snap-type: x mandatory; } }
   .client-shape {
     position: relative; }
     .client-shape:not(:last-child) {
