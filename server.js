@@ -44,7 +44,7 @@ mongoose.connect(process.env.DATABASE_LOCAL, {
 
 app.use(`/api/v1/mail`, emailRouter);
 
-const PORT = 5000 || process.env.PORT;
+const PORT = process.env.PORT || 5000;
 
 const server = app.listen(PORT, "0.0.0.0", () => {
     console.log(`now listening to port ${PORT}....`);
