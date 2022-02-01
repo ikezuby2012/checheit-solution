@@ -24,7 +24,8 @@ app.use(compression());
 
 if(process.env.NODE_ENV === 'production') {
     mongoose.connect(process.env.DATABASE_MONGO, {
-        //useNewUrlParser: true,
+        useNewUrlParser: true,
+useUnifiedTopology: true
         //useCreateIndex: true,
         //useFindAndModify: false
     }).then(() => {
@@ -45,7 +46,7 @@ app.use(`/api/v1/mail`, emailRouter);
 
 const PORT = 5000 || process.env.PORT;
 
-const server = app.listen(PORT, () => {
+const server = app.listen(PORT, "0.0.0.0", () => {
     console.log(`now listening to port ${PORT}....`);
 });
 
