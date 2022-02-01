@@ -24,13 +24,13 @@ app.use(compression());
 
 if(process.env.NODE_ENV === 'production') {
     mongoose.connect(process.env.DATABASE_MONGO, {
-        useNewUrlParser: true,
-        useCreateIndex: true,
-        useFindAndModify: false
+        //useNewUrlParser: true,
+        //useCreateIndex: true,
+        //useFindAndModify: false
     }).then(() => {
-        console.log(`DB connected successfully!`);
+        console.log(`mongoDB atlas connected successfully!`);
     });
-}
+} else {
 mongoose.connect(process.env.DATABASE_LOCAL, {
     useNewUrlParser: true,
     useCreateIndex: true,
@@ -38,6 +38,8 @@ mongoose.connect(process.env.DATABASE_LOCAL, {
 }).then(() => {
     console.log(`DB connected successfully!`)
 });
+}
+
 
 app.use(`/api/v1/mail`, emailRouter);
 
